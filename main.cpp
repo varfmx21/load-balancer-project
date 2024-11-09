@@ -95,7 +95,7 @@ int main() {
         matrix = createRandomMatrix(numServers);
     }
 
-    // Caso 1: Configuración básica de servidores
+    // Configuración básica de servidores
     /* vector<vector<int>> matrix1 = {
         {0, 1, 2, INF},
         {1, 0, INF, 3},
@@ -106,12 +106,16 @@ int main() {
     LoadBalancer lb(numServers, matrix, maxRequest);
 
     lb.displayServerLoads();
+    cout<<'\n';
     lb.distributeRequest(0);
     lb.distributeRequest(0);
     lb.distributeRequest(0); // Intentar exceder la carga máxima y pasa al otro servidor
+    cout<<'\n';
     lb.displayServerLoads();
+    cout<<'\n';
     lb.completeRequest(1);
     lb.distributeRequest(0);
+    cout<<'\n';
     lb.displayServerLoads();
 
     return 0;
